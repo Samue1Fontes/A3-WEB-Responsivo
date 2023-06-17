@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="login-cadastro.css" />
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <script src="login.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="login-form" class="login-form">
+        <h1 style="color: orange; text-align: center">Login</h1>
+        <div class="inputbox">
+          <i class="bx bx-id-card"></i>
+          <label for="cpf">CPF</label>
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            required
+            maxlength="14"
+            placeholder="Digite seu cpf (apenas números)"
+          />
+        </div>
+        <div class="inputbox">
+          <i class="bx bx-lock-alt"></i>
+          <label for="password">SENHA</label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Digite aqui sua senha"
+          />
+        </div>
+        <button type="submit">ENTRAR</button><br />
+
+        <p id="errorlog" class="errorlog" style="display: none"></p>
+
+        <p>Ainda não tem uma conta?</p>
+        <a href="cadastro.html">Cadastre-se</a>
+      </form>
+    </div>
+  </body>
+</html>

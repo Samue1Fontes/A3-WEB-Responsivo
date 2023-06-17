@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venda de Carros</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../carrossel-car-page.css" />
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="../index.html"
+            ><i class="bx bxs-car"></i> CarBytes Motors</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownVehicles"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Veículos
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownVehicles"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-2">
+                        <ul>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../paginas-carros/suv.html"
+                              >SUV</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../paginas-carros/esportivos.html"
+                              >Esportivos</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../paginas-carros/utilitarios.html"
+                              >Utilitários</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../paginas-carros/sedan.html"
+                              >Sedan</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../paginas-carros/off-road.html"
+                              >OFF Road</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownServices"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Serviços
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownServices"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-2">
+                        <ul>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../serviços/manutencao-preventiva.html"
+                              >Manutenção preventiva</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../serviços/limpeza-interna-e-externa.html"
+                              >Limpeza interna e externa</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="../serviços/polimento-e-pintura.html"
+                              >Polimento e Pintura</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../quem-somos.html">Quem somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../a33-full/login.html"><i class='bx bxs-user' style="color: orange;"></i> Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div
+        id="carCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../modelos-carros/OFF Road/Jeep Wrangler 2020/Jeep Wrangler 2020_img3.jpg"
+              alt="Carro 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../modelos-carros/OFF Road/Jeep Wrangler 2020/Jeep Wrangler 2020_img1.jpg"
+              alt="Carro 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../modelos-carros/OFF Road/Jeep Wrangler 2020/Jeep Wrangler 2020_img2.jpg"
+              alt="Carro 1"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-car">
+        <div class="car-description">
+          <h2>Jeep Wrangler 2020</h2>
+          <p>
+            Apresentamos o Jeep Wrangler 2020, o verdadeiro ícone do mundo off-road. 
+            Este veículo excepcional combina a lendária capacidade todo-terreno da marca Jeep com um design robusto e uma experiência de condução empolgante. 
+            Prepare-se para enfrentar qualquer aventura, seja na cidade ou fora dela.
+          </p>
+          <p>
+            O Jeep Wrangler 2020 ostenta um visual marcante e distinto, com sua carroceria resistente e linhas fortes que evocam a herança da Jeep. 
+            Com seu teto removível e portas destacáveis, você pode experimentar a liberdade ao ar livre e a sensação única de conexão com a natureza.
+          </p>
+          <p>
+            Sob o capô, o Jeep Wrangler 2020 oferece um desempenho poderoso e confiável. 
+            Equipado com um motor potente, este veículo tem o poder necessário para enfrentar terrenos desafiadores com facilidade. 
+            Seu sistema de tração nas quatro rodas permite que você conquiste estradas íngremes, trilhas acidentadas e atravessamentos de rios, tornando-se o parceiro ideal para os aventureiros de espírito livre.
+          </p>
+          <div class="car-features-position">
+            <div class="row">
+              <div class="col-md-4">
+                <p>
+                  Ano:<br> 
+                  <span class="car-features-color-onlytext"><i class='bx bx-calendar'></i>  2020</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Km:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bx-tachometer'></i>  8.900</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Câmbio:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bx-sitemap'></i>  Automático</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Portas:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bxs-door-open'></i>  2 Portas</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Cor:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bx-adjust'></i>  Amarelo</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Combustível:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bx-gas-pump'></i>  Gasolina</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Tipo de Veículo:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bxs-car'></i>  OFF Road</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Marca:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bxl-sketch'></i>  Jeep</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Modelo:<br>
+                  <span class="car-features-color-onlytext"><i class='bx bxs-car'></i>  Wrangler</span
+                  ><span class="check">✓</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="car-price">
+            <h1>R$ 429.814  <i class='bx bxs-purchase-tag'></i></h1>
+          </div>
+          <div class="fin-desc">
+            <h3>Ficou interessado?</h3>
+            <p class="fin-desc-p1">Entre em <span><a href="../contato.html">CONTATO</a></span> com a gente!</p>
+            <p class="fin-desc-p2">&lt;CLIQUE AQUI&gt;</p>
+          </div>
+          <div class="cursor">
+            <P class="fin-desc-pointer-animation"><i class='bx bx-pointer'></i></P>
+          </div>
+          <div>
+            <P class="msg">Agradecemos por visitar nosso site e esperamos poder atendê-lo em
+              breve na CarByte Motors!</P>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <p><i class="bx bx-envelope"></i> E-mail: contato@exemplo.com</p>
+          </div>
+          <div class="col-md-4">
+            <p><i class="bx bx-map"></i> Rua Fictícia, 123</p>
+          </div>
+          <div class="col-md-4">
+            <p></p>
+          </div>
+          <div class="col-md-4">
+            <p><i class="bx bxs-id-card"></i> CNPJ: 12.345.678/0001-90</p>
+          </div>
+          <div class="col-md-4">
+            <p><i class="bx bx-map"></i>Cidade Fictícia - Estado Fictício</p>
+          </div>
+          <div class="col-md-4">
+            <p></p>
+          </div>
+          <div class="col-md-4">
+            <p><i class="bx bxs-phone-call"></i> TEL: 12345-678</p>
+          </div>
+          <div class="col-md-4">
+            <p><i class="bx bx-map"></i> CEP: 12345-678</p>
+          </div>
+          <div class="col-md-4">
+            <p style="text-align: right; margin: 0px 0px 0px 0px;"><a href="https://github.com/Samue1Fontes"><i class='bx bxl-github' style="font-size: xx-large;"></i>Github</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="sub-footer">
+      <div class="sub-footer">
+        <p class="sub-footer-text">
+          © 2023 CarBytes Motors™. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

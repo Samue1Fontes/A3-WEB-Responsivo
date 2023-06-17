@@ -1,0 +1,662 @@
+/* Estilos CSS */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Definir altura mínima para ocupar toda a viewport */
+  display: flex;
+  flex-direction: column;
+
+  background-image: url('imagens-carros/street.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  cursor: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Altere o valor do último parâmetro para ajustar a intensidade da translucidez */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container {
+  flex: 1;
+  /* Fazer com que o conteúdo preencha o espaço restante */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+/* Menu */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.5rem;
+  margin: 0 30px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: scale(1.1);
+}
+
+.navbar-brand {
+  font-size: 24px;
+  padding-left: 30px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* Sub Menu */
+.navbar-nav .submenu {
+  display: none;
+  background-color: #333;
+  position: absolute;
+  z-index: 999;
+}
+
+.navbar-nav .submenu li {
+  display: block;
+}
+
+.navbar-nav .submenu li a {
+  color: #fff;
+  padding: 5px;
+  display: block;
+}
+
+.navbar-nav .nav-item:hover .submenu {
+  display: block;
+}
+
+/* Estilo Sub Menu */
+
+.col-lg-2 {
+  text-align: center;
+}
+
+.dropdown-menu {
+  background-color: #333;
+  /* Defina o tom mais claro desejado */
+  border: none;
+  box-shadow: none;
+}
+
+.dropdown-menu .container {
+  padding: 0;
+}
+
+.dropdown-menu .row {
+  margin: 0;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  /* Remover o estilo de lista */
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu .col-lg-2 {
+  padding: 0 10px;
+  /* Adicione algum espaçamento horizontal se desejar */
+}
+
+.dropdown-item {
+  color: #fff;
+  /* Defina a cor do texto desejada */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: transparent;
+  /* Remover o fundo ao passar o mouse ou focar */
+  color: orange;
+  /* Defina a cor do texto desejada */
+}
+
+/* Fim Menu, Sub Menu, Estilo Sub Menu */
+
+/* Estilos CSS para a página "Quem Somos" */
+.text-quem-somos {
+  margin-top: 100px;
+  flex-basis: calc(33.33% - 20px);
+  border: 0px solid #ccc;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #30303065;
+  border-radius: 20px;
+}
+
+.text-quem-somos:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.text-quem-somos h3 {
+  color: orange;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.text-quem-somos-p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 0px 35px 0px 35px;
+}
+
+.text-quem-somos-end {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+  padding: 0px 35px 0px 35px;
+}
+
+/* Estilos CSS para a página "Manutenção Preventiva" */
+.manutencao-text {
+  margin-top: 100px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #30303065;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.manutencao-text:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.manutencao-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.manutencao-text a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+.manutencao-text h3 {
+  color: orange;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.manutencao-text-p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 0px 50px 0px 50px;
+}
+
+.manutencao-text-end {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+  padding: 0px 35px 0px 35px;
+}
+
+.manutencao-image1 {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+.manutencao-image2 {
+  float: right;
+  max-width: 50%;
+  height: auto;
+  max-height: 150px;
+  margin-bottom: 35px;
+}
+
+/* Estilos para a página "Limpeza interna e externa" */
+.text-limpeza {
+  margin-top: 100px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #30303065;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.text-limpeza:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.text-limpeza a {
+  text-decoration: none;
+  color: white;
+}
+
+.text-limpeza a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+.text-limpeza h3 {
+  color: orange;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.text-limpeza-p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 0px 50px 0px 50px;
+}
+
+.text-limpeza ul {
+  list-style-type: disc;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.text-limpeza-end {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+  padding: 0px 35px 0px 35px;
+}
+
+.image-limpeza1 {
+  max-width: 100%;
+  max-height: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+.image-limpeza2 {
+  float: right;
+  max-width: 50%;
+  height: auto;
+  max-height: 150px;
+  margin-bottom: 35px;
+  border: solid 1px white;
+  border-radius: 100%;
+}
+
+/* Estilos para a página "Polimento e Pintura" */
+.text-polimento {
+  margin-top: 35px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #30303065;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.text-polimento:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.text-polimento a {
+  text-decoration: none;
+  color: white;
+}
+
+.text-polimento a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+.text-polimento h3 {
+  color: orange;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.text-polimento-p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 0px 50px 0px 50px;
+}
+
+.text-polimento ul {
+  list-style-type: disc;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.text-polimento-end {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+  padding: 0px 35px 0px 35px;
+}
+
+.image-polimento1 {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+.image-polimento2 {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  margin-bottom: 35px;
+  border: #fff solid 1px;
+  border-radius: 100%;
+}
+
+/* Estilos da seção de contato */
+.text-contato {
+  margin-top: 35px;
+  flex-basis: calc(33.33% - 20px);
+  border: 0px solid #ccc;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+  background-color: #30303065;
+  border-radius: 20px;
+}
+
+.text-contato:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.text-contato h3 {
+  color: orange;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.contact-info {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0px 35px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-info ul li:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: orange;
+  margin-right: 10px;
+}
+
+.contact-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  /* Defina a altura máxima desejada */
+}
+
+/* Estilo para a parte dos Carros*/
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.car-card {
+  flex-basis: calc(33.33% - 20px);
+  border: 0px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #30303065;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.href-car-card-link {
+  text-decoration: none;
+}
+
+.car-card:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.car-card:active {
+  transform: scale(0.99);
+}
+
+.car-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  border-radius: 8px;
+}
+
+.car-card h5 {
+  color: orange;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding-right: 10px;
+}
+
+.car-card p:first-of-type {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  background-color: rgba(0, 128, 0, 0.5);
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.car-card hr {
+  float: initial;
+  color: #fff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.car-card p:nth-of-type(2) {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: -18px;
+  margin-top: 0px;
+  text-align: left;
+  padding-top: 18px;
+}
+
+.car-card p:last-of-type {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: right;
+  padding-top: 0px;
+}
+
+.carousel-item {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.carousel-indicators {
+  list-style: none;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Largura da barra de rolagem */
+  background-color: #333;
+  /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilo do indicador da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: hwb(39 0% 0%);
+  /* Cor do indicador da barra de rolagem */
+  border-radius: 5px;
+  /* Raio do indicador da barra de rolagem */
+}
+
+/* Estilo do indicador da barra de rolagem quando hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffcc00;
+  /* Cor do indicador da barra de rolagem ao passar o mouse */
+}
+
+/* Estilo da trilha da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #575757;
+  /* Cor da trilha da barra de rolagem */
+}
+
+.footer {
+  text-align: justify;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: auto;
+  padding: 0px 0px 0px 0px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: orange;
+}
+
+.sub-footer {
+  background-color: rgb(209, 136, 0);
+  color: white;
+  text-align: center;
+  padding: 0px;
+}
+
+.sub-footer-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}

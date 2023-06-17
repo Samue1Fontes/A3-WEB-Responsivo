@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="login-cadastro.css" />
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <style>
+      .error {
+        border: 1px solid red;
+      }
+
+      .valid {
+        border: 1px solid green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form
+        id="registrationForm"
+        action="http://127.0.0.1:8080/api/users"
+        method="post"
+        class="register-form"
+      >
+        <h1 style="color: orange; text-align: center">Cadastro</h1>
+        <div class="inputbox">
+          <i class="bx bxs-user"></i>
+          <label for="fullName">NOME COMPLETO</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Digite seu nome completo"
+            required
+          />
+        </div>
+        <div class="inputbox">
+          <i class="bx bx-envelope"></i>
+          <label for="email">E-MAIL</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Digite seu e-mail"
+          />
+        </div>
+        <div class="inputbox">
+          <i class="bx bx-id-card"></i>
+          <label for="cpf">CPF</label>
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            placeholder="Digite o seu CPF"
+            required
+            maxlength="14"
+            oninput="formatCPF(this)"
+            onblur="validateCPF(this.value)"
+          />
+        </div>
+        <div class="inputbox">
+          <label for="birthdate">DATA DE NASCIMENTO</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+        </div>
+        <div class="inputbox">
+          <i class="bx bx-lock-alt"></i>
+          <label for="password">SENHA</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Digite sua senha"
+            required
+            oninput="validatePassword()"
+          />
+        </div>
+        <div class="password-requirements-container">
+          <ul id="password-requirements">
+            <li class="error">Pelo menos 8 caracteres &#x2717;</li>
+            <li class="error">Pelo menos uma letra maiúscula &#x2717;</li>
+            <li class="error">Pelo menos um caractere especial &#x2717;</li>
+          </ul>
+        </div>
+        <br /><br />
+
+        <div class="inputbox">
+          <i class="bx bx-lock-alt"></i>
+          <label for="confirm-password">CONFIRMAR SENHA</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirmPassword"
+            placeholder="Confirme sua senha"
+            required
+            oninput="validateConfirmPassword()"
+          />
+        </div>
+
+        <button type="submit">CADASTRAR</button>
+        <button id="getLocationButton" type="button">
+          Obter minha localização <i class="bx bx-map"></i>
+        </button>
+        <a href="login.html">Ir para página de Login</a>
+
+        <div id="locationResult">
+          <span id="state"></span>
+          <span id="country"></span>
+        </div>
+        <!-- Elemento para exibir a localização -->
+
+        <div id="cpf-validation" style="display: none"></div>
+        <p id="errorMessage"></p>
+      </form>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="local.js" defer></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE-HJiKzUtdEWW8gzY8yj0CSBo3zi4SZQ&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
